@@ -4,7 +4,7 @@ AWS CDK deploy to multi-region PoC
 This will create a AWS SSM parameter called **FooParameter** in *us-east-1* and *eu-west-1* AWS regions, and then destroy it.
 
 
-The [**.aws_credentials**](.aws_credentials) contains the AWS Credentials
+You need to create a file named [**.aws_credentials**](.aws_credentials) that contains the AWS Credentials
 ```angular2html
 [default]
 aws_access_key_id=AWS_ACCESS_KEY
