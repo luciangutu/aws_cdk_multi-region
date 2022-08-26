@@ -15,3 +15,11 @@ DOCKER_BUILDKIT=1 docker build -t aws_cdk_multi-region --secret id=aws,src=.aws_
 ```
 
 The container will run the contents of [**bootstrap.sh**](bootstrap.sh) 
+
+To list the stacks:
+```angular2html
+$ cd awscdk_poc
+$ cdk list
+AwscdkPocStack-eu
+AwscdkPocStack-us
+```

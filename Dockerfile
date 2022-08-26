@@ -1,5 +1,6 @@
 FROM node
-ENV AWS_REGION="us-east-1"
+
+ARG PROJECT_NAME="awscdk-poc"
 
 RUN apt-get update -y && \
     apt-get install -y unzip wget
@@ -16,9 +17,8 @@ RUN python3 -m pip install aws-cdk-lib awscli
 ################################
 RUN npm install -g aws-cdk
 
-#ADD ${PROJECT_NAME}/ ${PROJECT_NAME}
-#WORKDIR ${PROJECT_NAME}
-#RUN pip3 install -r requirements.txt
+ADD ${PROJECT_NAME}/ ${PROJECT_NAME}
+WORKDIR ${PROJECT_NAME}
 
 COPY bootstrap.sh .
 RUN chmod +x bootstrap.sh
