@@ -14,4 +14,4 @@ To run:
 DOCKER_BUILDKIT=1 docker build -t aws_cdk_multi-region --secret id=aws,src=.aws_credentials .
 ```
 
-The container will run the contents of bootstrap.sh 
+The container will run the contents of [**bootstrap.sh**](bootstrap.sh) 
